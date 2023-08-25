@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "add-todo": "node utils/data/seeder.js -todo",
+    "add-user": "node utils/data/seeder.js -user",
+    "delete": "node utils/data/seeder.js -d"
   },
   "keywords": [],
   "author": "",
