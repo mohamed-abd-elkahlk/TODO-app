@@ -1,7 +1,9 @@
 export default function Regsiter() {
   return (
     <>
-      <div>Register</div>
+      <div>
+        <h1></h1>
+      </div>
     </>
   );
 }
