@@ -9,7 +9,6 @@ const dbConnection = require("../../config/db");
 const envPath = path.join(__dirname, "../../.env/config.env");
 dotenv.config({ path: envPath });
 
-console.log(process.env.DB_STRING);
 // connect to DB
 dbConnection();
 // Read users
@@ -147,4 +146,7 @@ if (process.argv[2] === "-users") {
   insertData();
 } else if (process.argv[2] === "-d") {
   destroyData();
+} else {
+  console.log(`there are an error in the command you typed`.red.inverse);
+  process.exit(1);
 }

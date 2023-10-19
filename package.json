@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon",
+    "dev": "nodemon",
     "add-todo": "node utils/data/seeder.js -todo",
-    "add-user": "node utils/data/seeder.js -user",
+    "add-user": "node utils/data/seeder.js -users",
     "delete": "node utils/data/seeder.js -d"
   },
   "keywords": [],
