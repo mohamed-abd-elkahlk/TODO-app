@@ -22,6 +22,13 @@ if (process.env.NODE_ENV === "devlopment") {
 }
 passport.use(require("./config/passport"));
 
+app.use(
+  require("cors")({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
+
 app.use(passport.initialize());
 
 app.use(
