@@ -16,16 +16,15 @@ export const TodoWraber = () => {
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
-
-    const editTask = (task, id) => {
-      setTodos(
-        todos.map((todo) =>
-          todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
-        )
-      );
-    };
-    const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
   };
+  const editTask = (task, id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
+      )
+    );
+  };
+  const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
   return (
     <div className="TodoWrapper">
       <TodoForm addTodo={addTodo} />
@@ -35,7 +34,7 @@ export const TodoWraber = () => {
           key={index}
           toggleComplete={toggleComplete}
           deleteTodo={deleteTodo}
-          editTodo={editTodo}
+          editTodo={editTask}
         />
       ))}
     </div>
